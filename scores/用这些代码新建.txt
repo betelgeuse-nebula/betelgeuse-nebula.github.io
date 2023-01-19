@@ -1,2 +1,2 @@
 自定义路径创建
-hexo new page "朋友再见2" -p scores/朋友再见2/朋友再见2 -s "https://betelgeuse-nebula.github.io/scores/朋友再见2"
+hexo new page -p scores/朋友再见5 "朋友再见5"
