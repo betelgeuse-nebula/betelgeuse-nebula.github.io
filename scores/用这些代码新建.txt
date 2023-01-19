@@ -1,2 +1,2 @@
 自定义路径创建
-hexo new page -p scores/朋友再见
+hexo new page -p scores/朋友再见/朋友再见 "朋友再见" -s https://betelgeuse-nebula.github.io/scores/%E6%9C%8B%E5%8F%8B%E5%86%8D%E8%A7%81
