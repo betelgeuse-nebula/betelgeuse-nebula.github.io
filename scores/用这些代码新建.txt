@@ -1,2 +1,2 @@
 自定义路径创建
-hexo new page -p scores/朋友再见5 "朋友再见5"
+hexo new page -p scores/朋友再见 "朋友再见"
