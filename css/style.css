@@ -2723,7 +2723,7 @@ pre .deletion {
 }
 @media (prefers-color-scheme: light) {
   .first-screen-container {
-    background: url("https://evan.beee.top/img/wallhaven-wqery6-light.webp") center center/cover no-repeat !important;
+    background: url("https://betelgeuse-nebula.github.io/Bao1.png") center center/cover no-repeat !important;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -2732,7 +2732,7 @@ pre .deletion {
   }
 }
 .light-mode .first-screen-container {
-  background: url("https://evan.beee.top/img/wallhaven-wqery6-light.webp") center center/cover no-repeat !important;
+  background: url("https://betelgeuse-nebula.github.io/Bao1.png") center center/cover no-repeat !important;
 }
 .dark-mode .first-screen-container {
   background: url("https://betelgeuse-nebula.github.io/Bao1.png") center center/cover no-repeat !important;
