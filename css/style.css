@@ -2728,14 +2728,14 @@ pre .deletion {
 }
 @media (prefers-color-scheme: dark) {
   .first-screen-container {
-    background: url("Bao1.png") center center/cover no-repeat !important;
+    background: url("/source/Bao1.png") center center/cover no-repeat !important;
   }
 }
 .light-mode .first-screen-container {
   background: url("https://evan.beee.top/img/wallhaven-wqery6-light.webp") center center/cover no-repeat !important;
 }
 .dark-mode .first-screen-container {
-  background: url("Bao1.png") center center/cover no-repeat !important;
+  background: url("/source/Bao1.png") center center/cover no-repeat !important;
 }
 .image-viewer-container {
   position: fixed;
