@@ -1,2 +1,2 @@
 自定义路径创建
-hexo new page -p scores/2 "2"
+hexo new page -p scores/p1 "p1"
