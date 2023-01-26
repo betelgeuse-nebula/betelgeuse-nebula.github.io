@@ -1,2 +1,0 @@
-自定义路径创建
-hexo new page scores
