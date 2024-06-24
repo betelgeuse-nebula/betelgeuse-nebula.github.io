@@ -1,0 +1,2 @@
+自定义路径创建
+hexo new page -p astro/1 "1"

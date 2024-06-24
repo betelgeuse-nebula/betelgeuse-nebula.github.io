@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="参宿四星云">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://betelgeuse-nebula.github.io/notes/phy-astro.html"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="参宿四星云 | 物理-天文笔记  仅供学习参考，转载须注明出处，禁止商业用途。  0. 常数表  PDF (57 KB)给学天体物理的本科生用的、兼顾cgs与SI单位制的，但没有电磁相关常数的常数表。 1. 原子物理笔记  PDF (5.75 MB, 13 Pages)简要、零散的、学量子力学之前手写的原子物理笔记。 2. 光学笔记  PDF (10.5 MB, 44 Pages)乱七八糟且不">
+<meta property="og:type" content="website">
+<meta property="og:title" content="物理-天文笔记">
+<meta property="og:url" content="https://betelgeuse-nebula.github.io/notes/phy-astro.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="参宿四星云 | 物理-天文笔记  仅供学习参考，转载须注明出处，禁止商业用途。  0. 常数表  PDF (57 KB)给学天体物理的本科生用的、兼顾cgs与SI单位制的，但没有电磁相关常数的常数表。 1. 原子物理笔记  PDF (5.75 MB, 13 Pages)简要、零散的、学量子力学之前手写的原子物理笔记。 2. 光学笔记  PDF (10.5 MB, 44 Pages)乱七八糟且不">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-01-02T14:04:37.000Z">
+<meta property="article:modified_time" content="2024-05-31T08:43:46.063Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://pic.imgdb.cn/item/64ba97531ddac507ccba2cb6.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://pic.imgdb.cn/item/64ba97531ddac507ccba2cb6.png">
+    <meta name="theme-color" content="#005080">
+    <link rel="shortcut icon" href="https://pic.imgdb.cn/item/64ba97531ddac507ccba2cb6.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            物理-天文笔记 -
+        
+        参宿四星云的小站
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"betelgeuse-nebula.github.io","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":false},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#005080","secondary":null,"default_mode":"dark"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":false,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://pic.imgdb.cn/item/63cd427abe43e0d30e273e9f.webp","dark":"https://pic.imgdb.cn/item/63cccd3dbe43e0d30e474bac.webp"},"title":"Betelgeuse Nebula","subtitle":{"text":["「人类只有一片天空，所有仰望星空、流连于太空梦想的人，都将是我们永远的、尊贵的朋友。」——《中国国家天文》","天文观测中的照明光源，用红色还是橙色呢？","为什么月全食时没有“地照现象”呢？","参宿四什么时候才会爆炸？"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":60,"backing_speed":40,"starting_delay":400,"backing_delay":1700,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"none","icon":"fa-regular fa-archive"},"曲谱":{"path":"/scores","icon":"fa-regular fa-list-music"},"天文":{"path":"/astro","icon":"fa-regular fa-planet-ringed"},"笔记":{"path":"/notes","submenus":{"笔记主页":"/notes","数学":"/notes/math","物理-天文":"/notes/phy-astro"},"icon":"fa-regular fa-sheet-plastic"},"轨交":{"path":"/railmap","submenus":{"轨交主页":"/railmap","自己乱画":"/railmap/original"},"icon":"fa-regular fa-train-subway"},"About":{"path":"/about/","submenus":{"关于我":"/about/","友链":"/links/"},"icon":"fa-regular fa-user"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"hrbetelgeuse@gmail.com","show_on_mobile":true,"links":{"home":{"path":"https://betelgeuse-nebula.github.io","icon":"fa-regular fa-house"},"曲谱":{"path":"https://betelgeuse-nebula.github.io/scores","icon":"fa-regular fa-list-music"},"天文":{"path":"https://betelgeuse-nebula.github.io/astro","icon":"fa-regular fa-planet-ringed"},"笔记":{"path":"https://betelgeuse-nebula.github.io/notes","submenus":{"笔记主页":"/notes","数学":"/notes/math","物理-天文":"/notes/phy-astro"},"icon":"fa-regular fa-sheet-plastic"},"轨交":{"path":"https://betelgeuse-nebula.github.io/railmap","submenus":{"轨交主页":"/railmap","自己乱画":"/railmap/original"},"icon":"fa-regular fa-train-subway"},"关于我":{"path":"https://betelgeuse-nebula.github.io/about/","icon":"fa-regular fa-user"},"友链":{"path":"https://betelgeuse-nebula.github.io/links/","submenus":null,"icon":"fa-regular fa-link"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/1/21 00:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        参宿四星云的小站
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://pic.imgdb.cn/item/64ba97531ddac507ccba2cb6.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                参宿四星云的小站
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/scores"
+                                        >
+                                    <i class="fa-regular fa-list-music fa-fw"></i>
+                                    曲谱
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/astro"
+                                        >
+                                    <i class="fa-regular fa-planet-ringed fa-fw"></i>
+                                    天文
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-sheet-plastic fa-fw"></i>
+                                    笔记
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/notes">
+                                                    笔记主页
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/notes/math">
+                                                    数学
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/notes/phy-astro">
+                                                    物理-天文
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-train-subway fa-fw"></i>
+                                    轨交
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/railmap">
+                                                    轨交主页
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/railmap/original">
+                                                    自己乱画
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about/">
+                                                    关于我
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/links/">
+                                                    友链
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/scores"
+                        >
+                            <span>
+                                曲谱
+                            </span>
+                            
+                                <i class="fa-regular fa-list-music fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/astro"
+                        >
+                            <span>
+                                天文
+                            </span>
+                            
+                                <i class="fa-regular fa-planet-ringed fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                             navbar-data-toggle="submenu-笔记"
+                        >
+                            <span>
+                                笔记
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-笔记">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/notes">笔记主页</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/notes/math">数学</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/notes/phy-astro">物理-天文</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-轨交"
+                        >
+                            <span>
+                                轨交
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-轨交">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/railmap">轨交主页</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/railmap/original">自己乱画</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about/">关于我</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/links/">友链</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="https://betelgeuse-nebula.github.io"
+                        >
+                            <span>首页</span>
+                            <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    
+                    
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="https://betelgeuse-nebula.github.io/about/"
+                        >
+                            <span>关于我</span>
+                            <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="https://betelgeuse-nebula.github.io/links/"
+                        >
+                            <span>友链</span>
+                            <i class="fa-regular fa-link fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">10</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="page-template-container">
+    
+    
+    
+    <div class="page-template-content markdown-body">
+        
+            <h2 id="参宿四星云-物理-天文笔记"><a href="#参宿四星云-物理-天文笔记" class="headerlink" title="  参宿四星云 | 物理-天文笔记  "></a><center>  参宿四星云 | 物理-天文笔记  </center></h2><center><font size=1>仅供学习参考，转载须注明出处，禁止商业用途。</font></center>
+
+<h4 id="0-常数表-PDF-57-KB"><a href="#0-常数表-PDF-57-KB" class="headerlink" title="0. 常数表  PDF (57 KB)"></a>0. 常数表 <font size=4> <a href="https://betelgeuse-nebula.github.io/files/%E5%B8%B8%E6%95%B0%E8%A1%A8v3.0.pdf">PDF (57 KB)</a></font></h4><p>给学天体物理的本科生用的、兼顾cgs与SI单位制的，但没有电磁相关常数的常数表。</p>
+<h4 id="1-原子物理笔记-PDF-5-75-MB-13-Pages"><a href="#1-原子物理笔记-PDF-5-75-MB-13-Pages" class="headerlink" title="1. 原子物理笔记  PDF (5.75 MB, 13 Pages)"></a>1. 原子物理笔记 <font size=4> <a href="https://betelgeuse-nebula.github.io/files/%E5%8E%9F%E5%AD%90%E7%89%A9%E7%90%86%E6%89%8B%E5%86%99%E7%AC%94%E8%AE%B0.pdf">PDF (5.75 MB, 13 Pages)</a></font></h4><p>简要、零散的、学量子力学之前手写的原子物理笔记。</p>
+<h4 id="2-光学笔记-PDF-10-5-MB-44-Pages"><a href="#2-光学笔记-PDF-10-5-MB-44-Pages" class="headerlink" title="2. 光学笔记  PDF (10.5 MB, 44 Pages)"></a>2. 光学笔记 <font size=4> <a href="https://betelgeuse-nebula.github.io/files/%E5%85%89%E5%AD%A6.pdf">PDF (10.5 MB, 44 Pages)</a></font></h4><p>乱七八糟且不完整的、由上了两遍光学的大类牲笔者手写扫描的光学笔记。</p>
+<h4 id="3-热统归纳-PDF-1-01-MB-11-Pages"><a href="#3-热统归纳-PDF-1-01-MB-11-Pages" class="headerlink" title="3. 热统归纳  PDF (1.01 MB, 11 Pages)"></a>3. 热统归纳 <font size=4> <a href="https://betelgeuse-nebula.github.io/files/%E7%83%AD%E7%BB%9F%E5%8F%8A%E6%A0%BC%E6%89%8B%E5%86%8C.pdf">PDF (1.01 MB, 11 Pages)</a></font></h4><p>笔者工作需要临时赶制的、缺漏重要章节（指费米凝聚和BEC）的热力学与统计物理浓缩归纳。</p>
+<h4 id="4-广相归纳-PDF-320-KB-12-Pages"><a href="#4-广相归纳-PDF-320-KB-12-Pages" class="headerlink" title="4. 广相归纳  PDF (320 KB, 12 Pages)"></a>4. 广相归纳 <font size=4> <a href="https://betelgeuse-nebula.github.io/files/Notes-Dirac-GR.pdf">PDF (320 KB, 12 Pages)</a></font></h4><p>笔者工作需要、并未深入理解而归纳的、过于程式化的广义相对论浓缩归纳。</p>
+<h4 id="5-Notes-on-Group-Theory-PDF-18-2-MB-13-Pages"><a href="#5-Notes-on-Group-Theory-PDF-18-2-MB-13-Pages" class="headerlink" title="5. Notes on Group Theory  PDF (18.2 MB, 13 Pages)"></a>5. Notes on Group Theory <font size=4> <a href="https://betelgeuse-nebula.github.io/files/Notes-on-A-Zee-Group-Theory-2.0.pdf">PDF (18.2 MB, 13 Pages)</a></font></h4><p>笔者凭兴趣读了一点点<a class="link"   target="_blank" rel="noopener" href="https://zh.z-library.se/book/17376308/71a5f8/group-theory-in-a-nutshell-for-physicists.html" >A.Zee所写Group Theory in a Nutshell for Physicists <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>而写（抄）的有点乱的群论手写笔记。</p>
+<h4 id="6-恒星物理笔记-PDF-37-5-MB-42-Pages"><a href="#6-恒星物理笔记-PDF-37-5-MB-42-Pages" class="headerlink" title="6. 恒星物理笔记  PDF (37.5 MB, 42 Pages)"></a>6. 恒星物理笔记 <font size=4> <a href="https://betelgeuse-nebula.github.io/files/%E6%81%92%E6%98%9F%E7%89%A9%E7%90%86.pdf">PDF (37.5 MB, 42 Pages)</a></font></h4><p>手写的、根据笔者学的第一门天文学硬核课程——恒星物理——所写的、有些程式化的浓缩笔记。</p>
+<h4 id="收藏夹-原子物理区"><a href="#收藏夹-原子物理区" class="headerlink" title="收藏夹 | 原子物理区"></a>收藏夹 | 原子物理区</h4><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">元素周期表</td>
+<td><a class="link"   target="_blank" rel="noopener" href="https://ptable.com/" >https://ptable.com/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+<tr>
+<td align="center">NIST-原子谱线</td>
+<td><a class="link"   target="_blank" rel="noopener" href="https://physics.nist.gov/PhysRefData/ASD/lines_form.html" >https://physics.nist.gov/PhysRefData/ASD/lines_form.html <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+</tr>
+</tbody></table>
+<h4 id="收藏夹-Simulation-CODE"><a href="#收藏夹-Simulation-CODE" class="headerlink" title="收藏夹 | Simulation CODE"></a>收藏夹 | Simulation CODE</h4><table>
+<thead>
+<tr>
+<th align="center">Name(Homepage&#x2F;Docu)</th>
+<th>Field</th>
+<th>System&#x2F;Platform</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a class="link"   target="_blank" rel="noopener" href="https://docs.mesastar.org/" >MESA <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+<td>Stellar Evolution</td>
+<td>Linux, MacOS, <a class="link"   target="_blank" rel="noopener" href="http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web" >Website <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><a class="link"   target="_blank" rel="noopener" href="https://rebound.readthedocs.io/" >REBOUND <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+<td>N-body Simulations</td>
+<td>Linux, MacOS, Windows</td>
+<td>C or Python</td>
+</tr>
+<tr>
+<td align="center"><a class="link"   target="_blank" rel="noopener" href="https://www.felderbooks.com/latticeeasy/" >LATTICEEASY <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></td>
+<td>Lattice Simulations in Cosmology</td>
+<td></td>
+<td>C++</td>
+</tr>
+</tbody></table>
+
+        
+    </div>
+    <div class="page-template-comments">
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.8s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">参宿四星云</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共 10 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.4</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
