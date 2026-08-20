@@ -25,7 +25,7 @@
 
 .lisao-line-text {
   min-width: 0;
-  font-size: 150%;
+  font-size: 120%;
 }
 
 .lisao-rare-test {
@@ -33,7 +33,7 @@
 }
 
 .lisao-rare-glyphs {
-  font-size: 150%;
+  font-size: 120%;
 }
 
 @media (max-width: 480px) {

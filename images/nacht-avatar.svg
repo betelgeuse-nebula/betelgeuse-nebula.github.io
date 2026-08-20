@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="NACHT">
+  <rect width="128" height="128" rx="24" fill="#0a1015"/>
+  <circle cx="64" cy="64" r="43" fill="none" stroke="#f4f2ea" stroke-width="3"/>
+  <text x="64" y="82" fill="#f4f2ea" font-family="monospace" font-size="52" text-anchor="middle">N</text>
+</svg>
