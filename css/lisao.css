@@ -1,0 +1,31 @@
+.lisao-poem {
+  margin: 1em 0;
+}
+
+.lisao-line {
+  display: grid;
+  grid-template-columns: 3ch minmax(0, 1fr);
+  column-gap: 0.9em;
+  align-items: baseline;
+  line-height: 2;
+}
+
+.lisao-line-no {
+  font-family: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, Monaco,
+    Consolas, "Liberation Mono", monospace;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.62;
+}
+
+.lisao-line-text {
+  min-width: 0;
+  font-family: "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC",
+    "Songti SC", STSong, SimSun, "SimSun-ExtB", "AR PL UMing CN", serif;
+}
+
+@media (max-width: 480px) {
+  .lisao-line {
+    column-gap: 0.7em;
+    line-height: 1.9;
+  }
+}
