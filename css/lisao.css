@@ -17,10 +17,23 @@
   opacity: 0.62;
 }
 
-.lisao-line-text {
-  min-width: 0;
+.lisao-line-text,
+.lisao-rare-glyphs {
   font-family: "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC",
     "Songti SC", STSong, SimSun, "SimSun-ExtB", "AR PL UMing CN", serif;
+}
+
+.lisao-line-text {
+  min-width: 0;
+  font-size: 150%;
+}
+
+.lisao-rare-test {
+  margin: 1em 0 1.25em;
+}
+
+.lisao-rare-glyphs {
+  font-size: 150%;
 }
 
 @media (max-width: 480px) {
