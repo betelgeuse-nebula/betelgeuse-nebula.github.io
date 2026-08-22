@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#111827" />
     <meta
       name="description"
-      content="中山大学天文学社活动室的定点式 3D 导览。"
+      content="中山大学天文学社活动室的交互式 3D 导览，支持定点参观与 WASD 自由移动。"
     />
     <title>天文活动室 · 3D 导览</title>
     <link rel="stylesheet" href="./styles.css" />
@@ -27,7 +27,7 @@
         <a class="icon-button topbar__back" href="../" aria-label="返回天文收藏夹">←</a>
         <div class="topbar__title">
           <span>天文活动室</span>
-          <small>定点导览 · v0.1</small>
+          <small>定点导览 + WASD · v0.4</small>
         </div>
         <div class="topbar__actions">
           <button id="help-button" class="icon-button" type="button" aria-label="查看操作说明">?</button>
@@ -44,7 +44,7 @@
       </div>
 
       <div id="interaction-hint" class="interaction-hint" aria-live="polite">
-        拖动画面环顾四周
+        拖动画面环顾 · WASD 前后左右移动
       </div>
 
       <nav class="tour-nav" aria-label="活动室导览点">
@@ -54,16 +54,13 @@
             <span>01</span><strong>门口</strong>
           </button>
           <button class="tour-stop" type="button" data-stop="1">
-            <span>02</span><strong>铁架</strong>
+            <span>02</span><strong>木柜</strong>
           </button>
           <button class="tour-stop" type="button" data-stop="2">
-            <span>03</span><strong>木柜</strong>
+            <span>03</span><strong>望远镜</strong>
           </button>
           <button class="tour-stop" type="button" data-stop="3">
-            <span>04</span><strong>大门展墙</strong>
-          </button>
-          <button class="tour-stop" type="button" data-stop="4">
-            <span>05</span><strong>新展区</strong>
+            <span>04</span><strong>配件柜</strong>
           </button>
         </div>
         <button id="next-stop" class="tour-nav__arrow" type="button" aria-label="下一个导览点">›</button>
@@ -75,10 +72,11 @@
           <button id="help-close" class="plain-button" type="button" aria-label="关闭说明">×</button>
         </div>
         <ul>
-          <li>选择下方五个导览点移动位置。</li>
-          <li>鼠标或手指拖动画面，可以在原地环顾。</li>
-          <li>发亮的书籍、柜门、海报和大门可以点击。</li>
-          <li>键盘数字 1—5 也可以切换位置。</li>
+          <li>电脑上使用 WASD 前后左右移动；手机仍使用定点导览。</li>
+          <li>鼠标或手指拖动画面，可以 360° 环顾。</li>
+          <li>下方四个导览按钮可随时把你传送回固定位置。</li>
+          <li>发亮的书籍、柜门、海报、器材和大门可以点击。</li>
+          <li>键盘数字 1—4 也可以切换位置。</li>
         </ul>
       </aside>
 
