@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://betelgeuse-nebula.github.io/astro/"/>
+    <link rel="canonical" href="https://betelgeuse-nebula.github.io/clubroom/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -21,19 +21,17 @@
     
     
         
-        <meta name="description" content="天文社区、星图、观测工具、科普网站与科研资源收藏。">
+        <meta name="description" content="中山大学天文学社活动室的定点式 3D 导览。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="天文收藏夹">
-<meta property="og:url" content="https://betelgeuse-nebula.github.io/astro/index.html">
+<meta property="og:title" content="天文活动室">
+<meta property="og:url" content="https://betelgeuse-nebula.github.io/clubroom/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="天文社区、星图、观测工具、科普网站与科研资源收藏。">
+<meta property="og:description" content="中山大学天文学社活动室的定点式 3D 导览。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://betelgeuse-nebula.github.io/astro-laser-pointer.webp">
-<meta property="article:published_time" content="2024-01-01T12:30:00.000Z">
-<meta property="article:modified_time" content="2026-08-22T12:00:26.689Z">
+<meta property="article:published_time" content="2026-08-22T09:10:00.000Z">
+<meta property="article:modified_time" content="2026-08-22T12:00:26.805Z">
 <meta property="article:author" content="Betelgeuse Nebula">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://betelgeuse-nebula.github.io/astro-laser-pointer.webp">
     
     
     <!--- Icon Part-->
@@ -45,7 +43,7 @@
     
     <title>
         
-            天文收藏夹 | 参宿四星云的小站
+            天文活动室 | 参宿四星云的小站
         
     </title>
 
@@ -363,7 +361,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active"
+                                <a class=""
                                    href="/astro"
                                         >
                                     <i class="fa-regular fa-planet-ringed fa-fw"></i>
@@ -557,7 +555,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
                            href="/astro"
                         >
                             <span>
@@ -754,518 +752,181 @@
 
 	<div class="page-template-content markdown-body">
 		
-		<h1>天文收藏夹</h1>
+		<h1>天文活动室</h1>
 		
 
 		<style>
-.astro-room-entry {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  margin: 4px 0 30px;
-  padding: 19px 22px;
+.clubroom-entry {
+  --room-deep: #0b1730;
+  --room-blue: #2f83c5;
+  --room-cyan: #8bdcf5;
   overflow: hidden;
-  border: 1px solid rgba(86, 166, 218, .3);
-  border-radius: 14px;
+  border: 1px solid rgba(105, 166, 206, .24);
+  border-radius: 22px;
+  background: linear-gradient(145deg, #0b1730, #152c4a 58%, #173752);
+  box-shadow: 0 24px 70px rgba(17, 44, 74, .2);
+  color: #f6fbff;
+}
+
+.clubroom-entry * { box-sizing: border-box; }
+
+.clubroom-entry__hero {
+  position: relative;
+  min-height: 330px;
+  display: grid;
+  align-items: end;
+  padding: clamp(26px, 6vw, 58px);
+  isolation: isolate;
+}
+
+.clubroom-entry__hero::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  content: "";
   background:
-    radial-gradient(circle at 85% 20%, rgba(112, 205, 241, .22), transparent 30%),
-    linear-gradient(125deg, #10233d, #173c5b);
-  box-shadow: 0 12px 30px rgba(21, 62, 91, .16);
-  color: #f5fbff !important;
+    linear-gradient(90deg, rgba(7, 17, 37, .98) 0%, rgba(8, 21, 43, .88) 47%, rgba(8, 22, 42, .25)),
+    url('/astro/clubroom/assets/yaya-telescope-poster.webp') center / cover;
+}
+
+.clubroom-entry__hero::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(0deg, rgba(7, 15, 30, .9), transparent 55%);
+}
+
+.clubroom-entry__copy { max-width: 590px; }
+
+.clubroom-entry__eyebrow {
+  margin: 0 0 10px;
+  color: var(--room-cyan);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .2em;
+}
+
+.clubroom-entry h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(30px, 7vw, 56px);
+  line-height: 1.08;
+  letter-spacing: .03em;
+}
+
+.clubroom-entry__lead {
+  max-width: 540px;
+  margin: 18px 0 0;
+  color: #d7e5ef;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.clubroom-entry__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.clubroom-entry__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  color: #071522 !important;
+  background: linear-gradient(135deg, #c8f0ff, #72d0f1);
+  box-shadow: 0 10px 32px rgba(40, 161, 211, .25);
+  font-weight: 700;
   text-decoration: none !important;
 }
 
-.astro-room-entry__copy { min-width: 0; }
-
-.astro-room-entry__copy small {
-  display: block;
-  margin-bottom: 5px;
-  color: #8edcf6;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .16em;
+.clubroom-entry__hint {
+  color: #9fb4c7;
+  font-size: 12px;
 }
 
-.astro-room-entry__copy strong {
+.clubroom-entry__details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.clubroom-entry__detail {
+  min-height: 128px;
+  padding: 24px;
+  border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.clubroom-entry__detail:last-child { border-right: 0; }
+
+.clubroom-entry__detail span {
   display: block;
+  color: var(--room-cyan);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+}
+
+.clubroom-entry__detail strong {
+  display: block;
+  margin-top: 8px;
   color: #fff;
-  font-size: 19px;
+  font-size: 15px;
 }
 
-.astro-room-entry__copy span {
-  display: block;
-  margin-top: 5px;
-  color: #c6d9e7;
-  font-size: 13px;
-  line-height: 1.55;
+.clubroom-entry__detail p {
+  margin: 7px 0 0;
+  color: #aebfd0;
+  font-size: 12px;
+  line-height: 1.65;
 }
 
-.astro-room-entry__action {
-  flex: 0 0 auto;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-@media (max-width: 560px) {
-  .astro-room-entry { align-items: flex-start; flex-direction: column; }
+@media (max-width: 700px) {
+  .clubroom-entry__hero { min-height: 390px; align-items: end; }
+  .clubroom-entry__hero::before {
+    background:
+      linear-gradient(0deg, rgba(7, 17, 37, .98) 8%, rgba(8, 21, 43, .72) 70%, rgba(8, 22, 42, .35)),
+      url('/astro/clubroom/assets/yaya-telescope-poster.webp') center / cover;
+  }
+  .clubroom-entry__details { grid-template-columns: 1fr; }
+  .clubroom-entry__detail { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .clubroom-entry__detail:last-child { border-bottom: 0; }
 }
 </style>
 
-<a class="astro-room-entry" href="/astro/clubroom/">
-  <span class="astro-room-entry__copy">
-    <small>INTERACTIVE · 3D TOUR</small>
-    <strong>天文活动室</strong>
-    <span>从五个定点看看社团的活动室和海报，翻翻木柜里的笔记。</span>
-  </span>
-  <span class="astro-room-entry__action">进入导览 →</span>
-</a>
-
-<!-- #### <center> ↓ ↓ ↓ 天体物理的新东西在这里 ↓ ↓ ↓ </center>
-
-#### <center>  [https://arxiv.org/list/astro-ph/new](https://arxiv.org/list/astro-ph/new)  </center>
-
---- -->
-
-<h3 id="1-天文社区"><a href="#1-天文社区" class="headerlink" title="1. 天文社区"></a>1. 天文社区</h3><h4 id="国内主流的天文社群平台"><a href="#国内主流的天文社群平台" class="headerlink" title="国内主流的天文社群平台"></a>国内主流的天文社群平台</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>巡星客</td>
-<td>成立于2020年，是目前（2026年3月）国内<strong>最活跃</strong>的天文摄影社区平台，汇聚了大量最新的天文摄影作品和赛事。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://istarshooter.com/" >https://istarshooter.com/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>牧夫天文论坛</td>
-<td>中国大陆最早成立（1999年）且<strong>知识沉淀最深厚</strong>的天文论坛，版面涵盖不同的观测主题、器材，还有自制DIY器材、多媒体分享和闲聊等版面，已经积累文章和帖子超过300万篇。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://bbs.imufu.cn/" >https://bbs.imufu.cn/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>ZWO天文社区</td>
-<td>由ZWO（振旺光电）搭建的<strong>全球性</strong>天文社群平台，方便查看附近（也可以在世界地图上找）星友作品并发表评论。主要适配移动端。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.astroimg.com/cn" >https://www.astroimg.com/cn<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h3 id="2-星图、天区识别与可视化"><a href="#2-星图、天区识别与可视化" class="headerlink" title="2. 星图、天区识别与可视化"></a>2. 星图、天区识别与可视化</h3><h4 id="星图与天区识别"><a href="#星图与天区识别" class="headerlink" title="星图与天区识别"></a>星图与天区识别</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Stellarium</td>
-<td>好用的离线星图（电脑用）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="http://stellarium.org/" >http://stellarium.org/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>SKY-MAP</td>
-<td>强大的在线星图（适合电脑）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="http://www.sky-map.org/" >http://www.sky-map.org/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Astronomy net</td>
-<td>用户上传照片，网站自动识别照片中的星座或天区</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://nova.astrometry.net/upload" >https://nova.astrometry.net/upload<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Legacy Survey Sky Browser</td>
-<td>科研级Stellarium 星图</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.legacysurvey.org/viewer" >https://www.legacysurvey.org/viewer<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h4 id="天文可视化"><a href="#天文可视化" class="headerlink" title="天文可视化"></a>天文可视化</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ofrohn.github.io projects</td>
-<td>好玩的交互式天文可视化项目锦集 (Author: Olaf Frohn)</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://ofrohn.github.io/" >https://ofrohn.github.io/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Solar System Exploration History</td>
-<td>A looooooong map of Solar System Exploration History</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://ofrohn.github.io/diag.html" >https://ofrohn.github.io/diag.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Gaia Sky</td>
-<td>Gaia Sky is a real-time, 3D, astronomy visualisation platform for desktop and VR that runs on Windows, Linux, and macOS. Open source and libre.</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://gaiasky.space/" >https://gaiasky.space/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h3 id="3-观测规划与实用工具"><a href="#3-观测规划与实用工具" class="headerlink" title="3. 观测规划与实用工具"></a>3. 观测规划与实用工具</h3><h4 id="综合工具"><a href="#综合工具" class="headerlink" title="综合工具"></a>综合工具</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>天文通</td>
-<td>由开发者大神“神秘的老A”打造的综合性天文工具箱，有APP和微信小程序。它整合了国内外众多专业数据源，例如天象预报、气象预报、空间天气预报（太阳活动、地磁暴和极光预报等）。2026年03月的新版已支持识别照片中的星座、天区或深空天体。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://laysky.com/" >https://laysky.com/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Mobile Observatory (MO)</td>
-<td>功能丰富的 Android 天文工具，包含星图、天体出没时间、天象日历、日月食、彗星、小行星、流星雨和人造卫星追踪等；通过 Google Play 提供免费版和付费 Pro 版。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.zima.mobileobservatorypro" >https://play.google.com/store/apps/details?id=com.zima.mobileobservatorypro<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Heavens Above</td>
-<td>提供国际空间站、中国空间站等人造卫星过境的<strong>精细</strong>预报、彗星预报、日月食预报等</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.heavens-above.com/main.aspx" >https://www.heavens-above.com/main.aspx<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h4 id="天象、天气与观测环境"><a href="#天象、天气与观测环境" class="headerlink" title="天象、天气与观测环境"></a>天象、天气与观测环境</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>流星在线 MeteorLive</td>
-<td>清华大学学生天文协会搭建的全自动流星联测平台，可查看流星追踪页面。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://meteorlive.com/tracking.html" >https://meteorlive.com/tracking.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Light Pollution Map &#x2F; 光污染地图</td>
-<td>全球知名的光污染地图查询工具，可以查看全球任何地点的光污染情况。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://lightpollutionmap.app/" >https://lightpollutionmap.app/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>天文通 - 全球光污染地图</td>
-<td>功能与“Light Pollution Map”类似，网站为简体中文。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://darkmap.cn/" >https://darkmap.cn/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Windy</td>
-<td>气象预测地图（有APP）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://embed.windy.com/" >https://embed.windy.com/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h4 id="太阳与空间天气"><a href="#太阳与空间天气" class="headerlink" title="太阳与空间天气"></a>太阳与空间天气</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Space weather prediction center, NOAA &#x2F; 空间天气预报中心（美国）</td>
-<td>提供<strong>实时</strong>的太阳极紫外(EUV)图像、X射线流量、太阳风参数、地磁暴预警和极光活动预测等。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.swpc.noaa.gov/products/goes-solar-ultraviolet-imager-suvi" >https://www.swpc.noaa.gov/products/goes-solar-ultraviolet-imager-suvi<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>SDO 官网</td>
-<td>NASA的太阳动力学观测卫星（SDO）官方网站，提供非常全面的超多波段的高分辨率太阳<strong>实时</strong>图像。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://sdo.gsfc.nasa.gov/" >https://sdo.gsfc.nasa.gov/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The Sun Today</td>
-<td>由 Dr. C. Alex Young 打造的太阳科普网站（英文），也整合了SDO和SOHO卫星当日拍摄的太阳图像（与视频）。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.thesuntoday.org/sun/current-observations/" >https://www.thesuntoday.org/sun/current-observations/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h3 id="4-科普与干货"><a href="#4-科普与干货" class="headerlink" title="4. 科普与干货"></a>4. 科普与干货</h3><h4 id="科普与天文资讯"><a href="#科普与天文资讯" class="headerlink" title="科普与天文资讯"></a>科普与天文资讯</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>有趣天文奇观</td>
-<td>小知识，大科普！</td>
-<td><a class="link"   target="_blank" rel="noopener" href="http://interesting-sky.china-vo.org/" >http://interesting-sky.china-vo.org/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>星空飨宴</td>
-<td>南京高校天文联合会每日天文网站</td>
-<td><a class="link"   target="_blank" rel="noopener" href="http://aunu.steveling.cn/" >http://aunu.steveling.cn/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>天文问答 - 北京天文馆</td>
-<td>【2026&#x2F;03&#x2F;15查看，网页404】</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.bjp.org.cn/twwd/xkygc/list.shtml" >https://www.bjp.org.cn/twwd/xkygc/list.shtml<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>科普文章&#x2F;视频 - 国家天文台</td>
-<td></td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://nao.cas.cn/ncb/kx/kpwz/" >https://nao.cas.cn/ncb/kx/kpwz/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>天文及授时 - 香港天文台</td>
-<td></td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.hko.gov.hk/sc/sitemap.html?menu=1292" >https://www.hko.gov.hk/sc/sitemap.html?menu=1292<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>NASA 每日一图</td>
-<td>每日一图 + 解析（英语）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://apod.nasa.gov/apod/archivepixFull.html" >https://apod.nasa.gov/apod/archivepixFull.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>NASA中文网 每日一图</td>
-<td>每日一图 + 解析（中英双语）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.nasachina.cn/astronomy-picture-of-the-day" >https://www.nasachina.cn/astronomy-picture-of-the-day<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Universe Today</td>
-<td>稍微硬核的天文科普新闻网站（英语）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.universetoday.com/" >https://www.universetoday.com/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h4 id="天文干货"><a href="#天文干货" class="headerlink" title="天文干货"></a>天文干货</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Notes on Amateur Telescope Optics</td>
-<td>关于业余望远镜的各种介绍（英文）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://telescope-optics.net/" >https://telescope-optics.net/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h4 id="有趣的网站和项目"><a href="#有趣的网站和项目" class="headerlink" title="有趣的网站和项目"></a>有趣的网站和项目</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>天体收藏家-孙国佑</td>
-<td>天体收藏站！（作者：孙国佑）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="http://sunguoyou.lamost.org/" >http://sunguoyou.lamost.org/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Astrogeeker</td>
-<td>【网页已404，保留此栏】</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.astrogeeker.com/" >https://www.astrogeeker.com/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>COIAS</td>
-<td>A web application enabling non-professionals to collaborate in searching for asteroids!</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://web-coias.u-aizu.ac.jp/" >https://web-coias.u-aizu.ac.jp/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h3 id="5-天文摄影与后期"><a href="#5-天文摄影与后期" class="headerlink" title="5. 天文摄影与后期"></a>5. 天文摄影与后期</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>SharpCap</td>
-<td>适用所有相机的驱动程序</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.sharpcap.co.uk/" >https://www.sharpcap.co.uk/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>AutoStakkert</td>
-<td>行星摄影叠加软件</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.autostakkert.com/wp/download/" >https://www.autostakkert.com/wp/download/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>RegiStax</td>
-<td>行星摄影锐化软件</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.astronomie.be/registax/" >https://www.astronomie.be/registax/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>imppg</td>
-<td>太阳摄影反色锐化软件</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://greatattractor.github.io/imppg/" >https://greatattractor.github.io/imppg/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>N.I.N.A.</td>
-<td>深空摄影软件，支持所有相机，功能完善，同时可以连接赤道仪实现自动化拍摄</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://nighttime-imaging.eu/" >https://nighttime-imaging.eu/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Siril</td>
-<td>深空后期软件，常用于叠加</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://siril.org/" >https://siril.org/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h3 id="6-历法"><a href="#6-历法" class="headerlink" title="6. 历法"></a>6. 历法</h3><h4 id="现代农历历书"><a href="#现代农历历书" class="headerlink" title="现代农历历书"></a>现代农历历书</h4><p>→ → → <a class="link"   target="_blank" rel="noopener" href="https://pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220309_6386774.html" >历书查询-紫金山天文台<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> ← ← ←</p>
-<p>注：紫金山天文台是我国编算现代农历的唯一权威机构，根据国家标准《农历的编算和颁行》（GB&#x2F;T 33661-2017）编算，每年年末才会发布下一年的日历资料。香港天文台曾与紫金山天文台校对过日历，可以作为有效的参考。（ref: 紫金山天文台历算和天文参考系研究团组某研究员，私人邮件，2024年5月19日）</p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://www.hko.gov.hk/sc/sitemap.html?menu=1292&submenu=1308" >香港天文台的年历<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>目前（2026年3月15日）已发布到2027年。其中2026年及以前的年历包含及其丰富的内容，除农历日期、节气、香港当地的潮涨潮退以外，还有香港的日出日落、行星出没时间、每月的星空和若干天象。</p>
-<p>点击查看年历： <a class="link"   target="_blank" rel="noopener" href="https://www.hko.gov.hk/sc/gts/astron2023/almanac2023_index.htm" >2023年<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> <a class="link"   target="_blank" rel="noopener" href="https://www.hko.gov.hk/sc/gts/astron2024/almanac2024_index.htm" >2024年<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> <a class="link"   target="_blank" rel="noopener" href="https://www.hko.gov.hk/sc/gts/astron2025/almanac2025_index.htm" >2025年<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> <a class="link"   target="_blank" rel="noopener" href="https://www.hko.gov.hk/sc/gts/astron2026/almanac2026_index.htm" >2026年<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> <a class="link"   target="_blank" rel="noopener" href="https://www.hko.gov.hk/sc/gts/astron2027/almanac2027_index.htm" >2027年<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><a class="link"   target="_blank" rel="noopener" href="http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220317_6399980.html" >历书科普问题解答-紫金山天文台<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>（待更新）</p>
-<h3 id="7-学术文献与研究动态"><a href="#7-学术文献与研究动态" class="headerlink" title="7. 学术文献与研究动态"></a>7. 学术文献与研究动态</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>arXiv</strong> (astro-ph recent)</td>
-<td>a daily preprint website for research papers</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://arxiv.org/list/astro-ph/recent" >https://arxiv.org/list/astro-ph/recent<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>arXiv (astro-ph.GA recent)</td>
-<td></td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://arxiv.org/list/astro-ph.GA/recent?skip=0&show=2000" >https://arxiv.org/list/astro-ph.GA/recent?skip=0&amp;show=2000<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>arXiv.q-cs</td>
-<td>每日arXiv天体物理论文翻译网站（Author: zqqian）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://arxiv.q-cs.cn/" >https://arxiv.q-cs.cn/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>ads (astrophysics data system)</td>
-<td>a database for researchers in astronomy and physics research papers</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://ui.adsabs.harvard.edu/" >https://ui.adsabs.harvard.edu/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td><strong>SciX (ScienceExplorer)</strong></td>
-<td><strong>An advance &amp; expand version of ads.</strong> <br>A digital library portal for researchers in astronomy, Earth science, heliophysics, physics, and planetary science.</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://scixplorer.org/home/" >https://scixplorer.org/home/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>astrobites</td>
-<td>a daily astrophysical journal written by students</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://astrobites.org/" >https://astrobites.org/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h3 id="8-天文数据库与科研工具"><a href="#8-天文数据库与科研工具" class="headerlink" title="8. 天文数据库与科研工具"></a>8. 天文数据库与科研工具</h3><h4 id="天文数据库"><a href="#天文数据库" class="headerlink" title="天文数据库"></a>天文数据库</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>天文学名词</td>
-<td>官方的天文名词在线“词典”，中英对照</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://nadc.china-vo.org/astrodict/" >https://nadc.china-vo.org/astrodict/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>CDS Portal</td>
-<td>查询天体</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://portal.cds.unistra.fr/" >https://portal.cds.unistra.fr/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>CDS VizieR</td>
-<td>查询星表</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://vizier.cds.unistra.fr/viz-bin/VizieR" >https://vizier.cds.unistra.fr/viz-bin/VizieR<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>CDS X-match</td>
-<td>交叉星表（可上传）</td>
-<td><a class="link"   target="_blank" rel="noopener" href="http://cdsxmatch.u-strasbg.fr/" >http://cdsxmatch.u-strasbg.fr/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Minor Planet Center Database Search &#x2F; 小行星数据库查询</td>
-<td>国际天文学联合会（IAU）下设的小行星中心官方数据库，可查询<strong>所有编号小行星</strong>及彗星的详细轨道参数和观测报告。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.minorplanetcenter.net/db_search" >https://www.minorplanetcenter.net/db_search<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>The International Variable Star Index</td>
-<td>查询变星</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://www.aavso.org/vsx/index.php?view=search.top" >https://www.aavso.org/vsx/index.php?view=search.top<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Fundamental parameters of Galactic globular clusters</td>
-<td>银河系球状星团数据库</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://people.smp.uq.edu.au/HolgerBaumgardt/globular/" >https://people.smp.uq.edu.au/HolgerBaumgardt/globular/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Filter Profile Service (by Carlos Rodrigo)</td>
-<td>滤光片的信息档案</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://svo2.cab.inta-csic.es/svo/theory/fps3/" >https://svo2.cab.inta-csic.es/svo/theory/fps3/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h4 id="科研工具"><a href="#科研工具" class="headerlink" title="科研工具"></a>科研工具</h4><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Binary_c Online</td>
-<td>The online version of a lightweight software for evolution of single&#x2F;binary&#x2F;multiple stars.</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://r-izzard.surrey.ac.uk/cgi-bin/binary5.cgi" >https://r-izzard.surrey.ac.uk/cgi-bin/binary5.cgi<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>MESA</td>
-<td>恒星演化代码；MESA-Web 无需在本地安装，可直接提交计算。本地安装要求 macOS 或 Linux；Windows 需使用 MESA-Docker 或 WSL2。</td>
-<td><a class="link"   target="_blank" rel="noopener" href="http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web-submit" >http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web-submit<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br><a class="link"   target="_blank" rel="noopener" href="https://docs.mesastar.org/" >https://docs.mesastar.org/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<h3 id="9-一些-Tutorial-指南"><a href="#9-一些-Tutorial-指南" class="headerlink" title="9. 一些 Tutorial &#x2F; 指南"></a>9. 一些 Tutorial &#x2F; 指南</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>描述</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Tao Tie (饕餮)</td>
-<td>A curated collection of resources for astrophysical research</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://taotie.readthedocs.io/" >https://taotie.readthedocs.io/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>Stellar Evolution Tutorial</td>
-<td>John Lattanzio</td>
-<td><a class="link"   target="_blank" rel="noopener" href="https://users.monash.edu/~johnl/StellarEvolnV1/" >https://users.monash.edu/~johnl/StellarEvolnV1/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-<tr>
-<td>CMB Introduction</td>
-<td>Wayne Hu</td>
-<td><a class="link"   target="_blank" rel="noopener" href="http://background.uchicago.edu/~whu/beginners/introduction.html" >http://background.uchicago.edu/~whu/beginners/introduction.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></td>
-</tr>
-</tbody></table>
-<!--
-
-#### 我的数据处理代码(Python)（不专业）
-
-|代码功能|网址|
-|-|-|
-|画出太阳的临边昏暗曲线，并根据亮度差异找出太阳的极区|https://github.com/betelgeuse-nebula/Plotting-Limb-Darkening-Curve-and-Identification-of-Solar-Pole|
-|测光（不含拍摄） + 拟合并绘制（变星的）周期谱|https://github.com/betelgeuse-nebula/Photometry-and-Periodogram|
-
--->
-
-<hr>
-<h3 id="↓-↓-↓-站主的天文科普公众号-↓-↓-↓"><a href="#↓-↓-↓-站主的天文科普公众号-↓-↓-↓" class="headerlink" title=" ↓ ↓ ↓ 站主的天文科普公众号 ↓ ↓ ↓ "></a><center> ↓ ↓ ↓ 站主的天文科普公众号 ↓ ↓ ↓ </center></h3><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://betelgeuse-nebula.github.io/astro-laser-pointer.webp"
-                      style="zoom:40%;" 
-                >
-
-<h4 id="指星笔天文科普"><a href="#指星笔天文科普" class="headerlink" title="指星笔天文科普"></a><center>指星笔天文科普</center></h4><h6 id="astro-laser-pointer"><a href="#astro-laser-pointer" class="headerlink" title="(astro_laser_pointer)"></a><center>(astro_laser_pointer)</center></h6><p>更新很慢！</p>
+<section class="clubroom-entry">
+  <div class="clubroom-entry__hero">
+    <div class="clubroom-entry__copy">
+      <p class="clubroom-entry__eyebrow">SYSU ASTRONOMY CLUB · 3D TOUR</p>
+      <h2>推门进来看看</h2>
+      <p class="clubroom-entry__lead">一个约 4 m × 4 m 的主活动室，沿窗侧还连通了 8 m × 3.2 m 的展示空间。里面放着器材、书籍、海报和许多活动留下的东西。这里采用五个固定位置导览。</p>
+      <div class="clubroom-entry__actions">
+        <a class="clubroom-entry__button" href="/astro/clubroom/">进入 3D 活动室 <span aria-hidden="true">→</span></a>
+        <span class="clubroom-entry__hint">支持电脑与手机 · 建议横屏观看</span>
+      </div>
+    </div>
+  </div>
+  <div class="clubroom-entry__details">
+    <div class="clubroom-entry__detail">
+      <span>01—05</span>
+      <strong>定点导览</strong>
+      <p>门口、铁架、木柜、大门展墙和新展区，点击下方按钮移动。</p>
+    </div>
+    <div class="clubroom-entry__detail">
+      <span>INTERACTIVE</span>
+      <strong>柜子与笔记</strong>
+      <p>打开木柜，点击两本笔记即可在网页中阅读。</p>
+    </div>
+    <div class="clubroom-entry__detail">
+      <span>V0.1</span>
+      <strong>仍在布置</strong>
+      <p>目前先保留白墙和真实的杂物感，内容会慢慢增加。</p>
+    </div>
+  </div>
+</section>
 
 	</div>
 

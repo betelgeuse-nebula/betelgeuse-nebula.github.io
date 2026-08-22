@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#111827" />
+    <meta
+      name="description"
+      content="中山大学天文学社活动室的定点式 3D 导览。"
+    />
+    <title>天文活动室 · 3D 导览</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="room-canvas" aria-label="天文活动室 3D 场景"></canvas>
+
+      <section id="loading" class="loading" aria-live="polite">
+        <div class="loading__mark" aria-hidden="true">✦</div>
+        <p class="loading__eyebrow">SYSU ASTRONOMY CLUB</p>
+        <h1>正在打开活动室</h1>
+        <div class="loading__track"><span id="loading-bar"></span></div>
+        <p id="loading-status">准备房间与陈设……</p>
+      </section>
+
+      <header class="topbar">
+        <a class="icon-button topbar__back" href="../" aria-label="返回天文收藏夹">←</a>
+        <div class="topbar__title">
+          <span>天文活动室</span>
+          <small>定点导览 · v0.1</small>
+        </div>
+        <div class="topbar__actions">
+          <button id="help-button" class="icon-button" type="button" aria-label="查看操作说明">?</button>
+          <button id="fullscreen-button" class="icon-button" type="button" aria-label="进入全屏">⛶</button>
+        </div>
+      </header>
+
+      <div id="scene-label" class="scene-label" aria-live="polite">
+        <span id="scene-index">01</span>
+        <div>
+          <strong id="scene-name">门口</strong>
+          <small id="scene-description">从门口看看活动室的全貌</small>
+        </div>
+      </div>
+
+      <div id="interaction-hint" class="interaction-hint" aria-live="polite">
+        拖动画面环顾四周
+      </div>
+
+      <nav class="tour-nav" aria-label="活动室导览点">
+        <button id="previous-stop" class="tour-nav__arrow" type="button" aria-label="上一个导览点">‹</button>
+        <div id="tour-stops" class="tour-nav__stops">
+          <button class="tour-stop is-active" type="button" data-stop="0">
+            <span>01</span><strong>门口</strong>
+          </button>
+          <button class="tour-stop" type="button" data-stop="1">
+            <span>02</span><strong>铁架</strong>
+          </button>
+          <button class="tour-stop" type="button" data-stop="2">
+            <span>03</span><strong>木柜</strong>
+          </button>
+          <button class="tour-stop" type="button" data-stop="3">
+            <span>04</span><strong>大门展墙</strong>
+          </button>
+          <button class="tour-stop" type="button" data-stop="4">
+            <span>05</span><strong>新展区</strong>
+          </button>
+        </div>
+        <button id="next-stop" class="tour-nav__arrow" type="button" aria-label="下一个导览点">›</button>
+      </nav>
+
+      <aside id="help-panel" class="help-panel" aria-hidden="true">
+        <div class="help-panel__head">
+          <strong>怎样参观</strong>
+          <button id="help-close" class="plain-button" type="button" aria-label="关闭说明">×</button>
+        </div>
+        <ul>
+          <li>选择下方五个导览点移动位置。</li>
+          <li>鼠标或手指拖动画面，可以在原地环顾。</li>
+          <li>发亮的书籍、柜门、海报和大门可以点击。</li>
+          <li>键盘数字 1—5 也可以切换位置。</li>
+        </ul>
+      </aside>
+
+      <section id="content-modal" class="content-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <button id="modal-backdrop" class="content-modal__backdrop" type="button" aria-label="关闭"></button>
+        <article class="content-modal__card">
+          <header>
+            <div>
+              <small id="modal-kicker">活动室藏书</small>
+              <h2 id="modal-title">标题</h2>
+            </div>
+            <button id="modal-close" class="plain-button" type="button" aria-label="关闭">×</button>
+          </header>
+          <div id="modal-content" class="content-modal__body"></div>
+          <footer>
+            <p id="modal-note"></p>
+            <a id="modal-open" class="modal-open" href="#" target="_blank" rel="noopener">在新标签页打开</a>
+          </footer>
+        </article>
+      </section>
+
+      <noscript>
+        <p class="no-script">这个 3D 页面需要启用 JavaScript。</p>
+      </noscript>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
